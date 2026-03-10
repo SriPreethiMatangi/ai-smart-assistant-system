@@ -1,25 +1,44 @@
 function sendMessage(){
 
 let input = document.getElementById("userInput").value;
+let chatbox = document.getElementById("chatbox");
 
-let response="";
+let userMessage = document.createElement("div");
+userMessage.className="message user";
+userMessage.innerText="You: "+input;
+
+chatbox.appendChild(userMessage);
+
+let reply="";
 
 if(input.toLowerCase().includes("sad")){
-response="You seem sad 😔. Try listening to relaxing music.";
-}
-
-else if(input.toLowerCase().includes("happy")){
-response="That's wonderful! Keep smiling 😊";
+reply="😔 I understand. Try listening to calming music.";
 }
 
 else if(input.toLowerCase().includes("stress")){
-response="Try deep breathing exercises for 2 minutes.";
+reply="🧘 Try breathing exercise: inhale 4s, hold 4s, exhale 4s.";
+}
+
+else if(input.toLowerCase().includes("happy")){
+reply="😊 That's great! Keep smiling!";
+}
+
+else if(input.toLowerCase().includes("music")){
+reply="🎵 I recommend relaxing piano music.";
 }
 
 else{
-response="I'm your AI assistant. How can I help you today?";
+reply="🤖 I'm your AI assistant. Ask me about mood, stress, or relaxation.";
 }
 
-document.getElementById("response").innerText=response;
+let botMessage=document.createElement("div");
+botMessage.className="message bot";
+botMessage.innerText="AI: "+reply;
+
+chatbox.appendChild(botMessage);
+
+document.getElementById("userInput").value="";
+
+chatbox.scrollTop=chatbox.scrollHeight;
 
 }
