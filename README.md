@@ -1,37 +1,25 @@
-# AI Smart Assistant System 🤖
+# AI Smart Assistant 🤖
 
-An AI powered chatbot that detects user mood and provides calming suggestions.
+An AI chatbot that detects user mood and suggests calming activities.
 
 ## Features
-- Chatbot interface
+- Chatbot conversation
 - Mood detection
 - Stress relief suggestions
+- Relaxing music recommendations
 - Simple AI responses
-- Flask backend
 
 ## Tech Stack
 Frontend:
-HTML  
-CSS  
-JavaScript  
+HTML
+CSS
+JavaScript
 
 Backend:
-Python  
-Flask  
+Python (Flask)
 
-## Installation
-
-Clone the repository
-
-git clone https://github.com/SriPreethiMatangi/ai-smart-assistant-system
-
-Install dependencies
-
-pip install -r requirements.txt
-
-Run the server
-
-python app.py
+## Live Demo
+https://sripreethimatangi.github.io/ai-smart-assistant-system/
 
 ## Author
-SriPreethiMatangi
+Preethi
