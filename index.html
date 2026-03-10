@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>AI Smart Assistant</title>
 <link rel="stylesheet" href="style.css">
@@ -8,12 +7,17 @@
 
 <body>
 
-<h1>AI Smart Assistant System</h1>
+<h1>🤖 AI Smart Assistant</h1>
 
-<div class="chatbox">
-    <input type="text" id="userInput" placeholder="Ask something...">
-    <button onclick="sendMessage()">Send</button>
-    <p id="response"></p>
+<div class="chat-container">
+
+<div id="chatbox"></div>
+
+<div class="input-area">
+<input type="text" id="userInput" placeholder="Type your message...">
+<button onclick="sendMessage()">Send</button>
+</div>
+
 </div>
 
 <script src="script.js"></script>
