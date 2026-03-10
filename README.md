@@ -1,25 +1,18 @@
-# AI Smart Assistant 🤖
+# AI Mental Health Assistant
 
-An AI chatbot that detects user mood and suggests calming activities.
+An AI chatbot that detects user mood and provides calming suggestions.
 
-## Features
+Features
 - Chatbot conversation
 - Mood detection
+- Mood analytics dashboard
 - Stress relief suggestions
-- Relaxing music recommendations
-- Simple AI responses
 
-## Tech Stack
-Frontend:
+Tech Stack
 HTML
 CSS
 JavaScript
+Python Flask
 
-Backend:
-Python (Flask)
-
-## Live Demo
-https://sripreethimatangi.github.io/ai-smart-assistant-system/
-
-## Author
+Author
 Preethi
