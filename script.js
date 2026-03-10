@@ -2,18 +2,24 @@ function sendMessage(){
 
 let input = document.getElementById("userInput").value;
 
-let response = "";
+let response="";
 
-if(input.includes("sad")){
-response = "I recommend listening to calming music.";
+if(input.toLowerCase().includes("sad")){
+response="You seem sad 😔. Try listening to relaxing music.";
 }
-else if(input.includes("happy")){
-response = "That's great! Keep smiling 😊";
+
+else if(input.toLowerCase().includes("happy")){
+response="That's wonderful! Keep smiling 😊";
 }
+
+else if(input.toLowerCase().includes("stress")){
+response="Try deep breathing exercises for 2 minutes.";
+}
+
 else{
-response = "I'm your AI assistant. How can I help you?";
+response="I'm your AI assistant. How can I help you today?";
 }
 
-document.getElementById("response").innerText = response;
+document.getElementById("response").innerText=response;
 
 }
