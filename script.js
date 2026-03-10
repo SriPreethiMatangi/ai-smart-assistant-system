@@ -1,41 +1,50 @@
+let moodData={
+happy:0,
+sad:0,
+stress:0,
+neutral:0
+};
+
 function sendMessage(){
 
-let input = document.getElementById("userInput").value;
-let chatbox = document.getElementById("chatbox");
+let input=document.getElementById("userInput").value.toLowerCase();
+let chatbox=document.getElementById("chatbox");
 
-let userMessage = document.createElement("div");
-userMessage.className="message user";
-userMessage.innerText="You: "+input;
+let userMsg=document.createElement("div");
+userMsg.className="message user";
+userMsg.innerText="You: "+input;
 
-chatbox.appendChild(userMessage);
+chatbox.appendChild(userMsg);
 
 let reply="";
 
-if(input.toLowerCase().includes("sad")){
-reply="😔 I understand. Try listening to calming music.";
+if(input.includes("sad")){
+reply="😔 I'm sorry you're feeling sad. Try listening to calming music.";
+moodData.sad++;
 }
 
-else if(input.toLowerCase().includes("stress")){
+else if(input.includes("stress")){
 reply="🧘 Try breathing exercise: inhale 4s, hold 4s, exhale 4s.";
+moodData.stress++;
 }
 
-else if(input.toLowerCase().includes("happy")){
-reply="😊 That's great! Keep smiling!";
-}
-
-else if(input.toLowerCase().includes("music")){
-reply="🎵 I recommend relaxing piano music.";
+else if(input.includes("happy")){
+reply="😊 That's wonderful! Keep smiling!";
+moodData.happy++;
 }
 
 else{
-reply="🤖 I'm your AI assistant. Ask me about mood, stress, or relaxation.";
+reply="🤖 I'm your AI assistant. Tell me how you feel.";
+moodData.neutral++;
 }
 
-let botMessage=document.createElement("div");
-botMessage.className="message bot";
-botMessage.innerText="AI: "+reply;
+let botMsg=document.createElement("div");
+botMsg.className="message bot";
+botMsg.innerText="AI: "+reply;
 
-chatbox.appendChild(botMessage);
+chatbox.appendChild(botMsg);
+
+localStorage.setItem("moodData",JSON.stringify(moodData));
 
 document.getElementById("userInput").value="";
 
